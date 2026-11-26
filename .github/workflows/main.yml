@@ -19,10 +19,10 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          
-    - name: Generate Android platform
-  run: flutter create --platforms=android --org com.candla --project-name ab .
-        
+
+      - name: Generate Android platform
+        run: flutter create --platforms=android --org com.candla --project-name candla_a_b .
+
       - name: Install dependencies
         run: flutter pub get
 
