@@ -20,8 +20,8 @@ jobs:
         with:
           channel: stable
           
-      - name: Generate Android platform
-        run: flutter create --platforms=android .
+    - name: Generate Android platform
+  run: flutter create --platforms=android --org com.candla --project-name ab .
         
       - name: Install dependencies
         run: flutter pub get
