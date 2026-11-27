@@ -356,13 +356,13 @@ class _HomePageState extends State<HomePage> {
             onPressed: () => Navigator.pop(dialogContext),
             child: const Text('إلغاء'),
           ),
-          ElevatedButton(
-            onPressed: () async {
-              if (name.text.trim().isEmpty ||
-                  product.text.trim().isEmpty ||
-                  number(price.text) <= 0) {
-                showMessage('يرجى إكمال بيانات الطلب');
-                return;
+          final expenseAmount = num.tryParse(amount.text.trim());
+
+if (title.text.trim().isEmpty ||
+    expenseAmount == null ||
+    expenseAmount <= 0) {
+  return;
+};
               }
 
               final order = {
