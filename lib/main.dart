@@ -478,7 +478,7 @@ if (title.text.trim().isEmpty ||
               setState(() {
                 expenses.add({
                   'title': title.text.trim(),
-                  'amount': number(amount.text),
+                  'amount': expenseAmount,
                   'date': DateTime.now()
                       .toString()
                       .substring(0, 10),
